@@ -17,7 +17,7 @@ public:
     void setTime(int, int, int);
     void printTime();
     void printTime2();
-    void Getting_the_hour(); // функция получения часа
+    int Get_hour(); // функция получения часа
 	~Time();
 
 private:
@@ -200,9 +200,9 @@ void Time::printTime2()
     }
 }
 
-void Time::Getting_the_hour()
+int Time::Get_hour()
 {
-    cout << "Сейчас часов: " << hour << endl;;
+    return hour;
 }
 
 
@@ -245,7 +245,8 @@ int main()
 
             case 2: {
                 system("cls");
-                vremya.Getting_the_hour();
+                int result = vremya.Get_hour();
+                cout << "Час = " << result << endl;
                 system("pause");
                 system("cls");
 
